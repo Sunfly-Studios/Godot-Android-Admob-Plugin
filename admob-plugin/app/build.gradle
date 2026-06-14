@@ -1,13 +1,15 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdk versions.compileSdk
+    namespace "shinnil.godot.plugin.android.godotadmob"
+    compileSdk 33
     buildToolsVersion versions.buildTools
+    ndkVersion "25.3.12161346"
 
     defaultConfig {
         applicationId "shinnil.godot.plugin.android.godotadmob"
-        minSdkVersion versions.minSdk
-        targetSdkVersion versions.targetSdk
+        minSdkVersion 19
+        targetSdkVersion 33
         versionCode pluginVersionCode
         versionName pluginVersionName
 

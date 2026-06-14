@@ -7,3 +7,4 @@
 *.o
 demo/android
 tools/releases
+.godot/

@@ -1,7 +1,7 @@
 extends Node2D
 
-onready var admob = $AdMob
-onready var debug_out = $CanvasLayer/DebugOut
+@onready var admob = $AdMob
+@onready var debug_out = $CanvasLayer/DebugOut
 
 func _ready():
 	
@@ -11,7 +11,7 @@ func _ready():
 	else:
 		print('Ads with consent')
 # warning-ignore:return_value_discarded
-	get_tree().connect("screen_resized", self, "_on_resize")
+	get_tree().connect("screen_resized", Callable(self, "_on_resize"))
 
 func loadAds() -> void:
 	admob.load_banner()
